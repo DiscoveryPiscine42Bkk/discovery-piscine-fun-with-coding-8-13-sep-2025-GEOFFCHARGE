@@ -1,0 +1,28 @@
+html, body
+{
+    height: 100%;
+    margin: 0;
+}
+
+table
+{
+    border-collapse: collapse;
+    width: 100%;
+    height: 100%;
+}
+
+td
+{
+    border: 1px solid black;
+    width: 50%;
+}
+
+.left
+{
+    background-color: #b5c78d;
+}
+
+.right
+{
+    background-color: #f1b39e;
+}
