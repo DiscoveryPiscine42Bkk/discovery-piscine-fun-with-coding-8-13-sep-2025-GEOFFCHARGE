@@ -1,0 +1,43 @@
+html, body
+{
+    height: 100%;
+    margin: 0;
+}
+
+.splitting
+{
+    align-items: center;
+    background-color: black;
+    color: white;
+    display: flex;
+    font-size: 50px;
+    height: 1000px;
+    justify-content: center;
+    text-align: center;
+}
+
+.parallax1, .parallax2
+{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+
+    align-items: center;
+    color: white;
+    font-size: 50px;
+    justify-content: center;
+    text-align: center;
+}
+
+.parallax1
+{
+    background-image: url("https://4kwallpapers.com/images/wallpapers/windows-11-blue-stock-white-background-light-official-3840x2160-5616.jpg");
+}
+
+.parallax2
+{
+    background-image: url("https://static.wikitide.net/windowswallpaperwiki/9/99/Img0_%28Windows_10_1903%29.jpg");
+}
