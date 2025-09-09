@@ -1,0 +1,38 @@
+*
+{
+    margin: 0px;
+}
+
+.navbar
+{
+    background-color: #333;
+}
+
+.dropdown
+{
+    background-color: #333;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 16px;
+}
+
+.content
+{
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 200px;
+}
+
+a
+{
+    color: white;
+    padding: 12px 16px;
+    display: block;
+}
+
+.navbar:hover .content
+{
+    display: block;
+}
