@@ -1,0 +1,54 @@
+html, body
+{
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+.card
+{
+    box-shadow: rgba(100, 100, 100, 0.5) 0px 6px 30px 0px;
+    margin: auto;
+    text-align: center;
+    width: 300px;
+}
+
+h2
+{
+    color: black;
+}
+
+.title
+{
+    color: grey;
+    font-size: 16px;
+}
+
+.locat
+{
+    color: black;
+    font-size: 16px;
+}
+
+.social
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.social img
+{
+    height: 20px;
+    width: 20px;
+}
+
+button {
+    background-color: #000000;
+    border: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
