@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body, html
+            {
+                width: 100%;
+                height: 100%;
+                display: flex;
+            }
+            #balloon
+            {
+                border-radius: 50%;
+                margin: auto;
+            }
+        </style>
+        <title>balloon</title>
+    </head>
+    <body>
+        <div id="balloon" style="width : 200px; height : 200px; background-color: red;" onclick="increase()" onmouseleave="decrease()"></div>
+        <script>
+            function increase()
+            {
+                let b = document.getElementById("balloon");
+                let h = parseInt(b.style.height);
+                let w = parseInt(b.style.width);
+                if (h > 420)
+                {
+                    b.style.height = "200px";
+                    b.style.width = "200px";
+                }
+                else
+                {
+                    b.style.height = (h + 10) + "px";
+                    b.style.width = (w + 10) + "px";
+                }
+                let c = b.style.backgroundColor;
+                if (c == 'red')
+                {
+                    b.style.backgroundColor = 'green';
+                }
+                else if (c == 'green')
+                {
+                    b.style.backgroundColor = 'blue';
+                }
+                else
+                {
+                    b.style.backgroundColor = 'red';
+                }
+            }
+            function decrease() {
+                let b = document.getElementById("balloon");
+                let h = parseInt(b.style.height);
+                let w = parseInt(b.style.width);
+                if (h > 200)
+                {
+                    b.style.height = (h - 5) + "px";
+                    b.style.width = (w - 5) + "px";
+                    let c = b.style.backgroundColor;
+                    if (c == 'red')
+                    {
+                        b.style.backgroundColor = 'blue';
+                    }
+                    else if (c == 'blue')
+                    {
+                        b.style.backgroundColor = 'green';
+                    }
+                    else
+                    {
+                        b.style.backgroundColor = 'red';
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
