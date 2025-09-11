@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body, html
+            {
+                width: 100%;
+                height: 100%;
+                display: flex;
+            }
+            #balloon
+            {
+                border-radius: 50%;
+                margin: auto;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <title>balloon</title>
+    </head>
+    <body>
+        <div id="balloon" style="width : 200px; height : 200px; background-color: red;"></div>
+        <script>
+            $(document).ready(function()
+            {
+                const balloon = $("#balloon");
+                const color = ["red", "green", "blue"];
+                let index = 0;
+                balloon.on("click", function()
+                {
+                    let h = balloon.height();
+                    let w = balloon.width();
+                    if (h > 420)
+                    {
+                        balloon.css({"height": "200px", "width": "200px"});
+                        balloon.css("background-color", "red");
+                    }
+                    else
+                    {
+                        balloon.height(h + 10);
+                        balloon.width(w + 10);
+                        balloon.css("background-color", color[(++index) % 3]);
+                    }
+                });
+                balloon.on("mouseleave", function()
+                {
+                    let h = balloon.height();
+                    let w = balloon.width();
+                    if (h > 200) {
+                        balloon.height(h - 5);
+                        balloon.width(w - 5);
+                        balloon.css("background-color", color[(++index) % 3]);
+                    }
+                });
+            })
+        </script>
+    </body>
+</html>
