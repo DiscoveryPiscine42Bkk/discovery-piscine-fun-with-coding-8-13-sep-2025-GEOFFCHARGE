@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            html, body
+            {
+                display: flex;
+                font-family: Arial, Helvetica, sans-serif;
+                height: 100%;
+                width: 100%;
+            }
+            .calc
+            {
+                box-shadow: rgba(100, 100, 100, 0.5) 0px 6px 30px 0px;
+                margin: auto;
+                text-align: center;
+                width: 280px;
+                height: 280px;
+                border-radius: 10px;
+            }
+        </style>
+        <title>calc</title>
+    </head>
+    <body>
+        <div class="calc">
+            <p>Number 1</p>
+            <input type="text" id="num1">
+            <p>Operator</p>
+            <select id="list">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+            </select>
+            <p>Number 2</p>
+            <input type="text" id="num2">
+            <br><br>
+            <button onclick="calc()">Try me!</button>
+        </div>
+        <script>
+            function calc()
+            {
+                let n1 = parseFloat(document.getElementById("num1").value);
+                let n2 = parseFloat(document.getElementById("num2").value);
+                let op = document.getElementById("list").value;
+                if (!Number.isInteger(n1) || !Number.isInteger(n2))
+                {
+                    alert("Error :(");
+                    console.log("Error :(");
+                }
+                else if ((op == "/" && n1 == 0 || n2 == 0) || (op == "%" && n1 == 0 || n2 == 0))
+                {
+                    alert("It’s over 9000!");
+                    console.log("It’s over 9000!");
+                }
+                else
+                {
+                    let result;
+                    switch(op)
+                    {
+                        case "+":
+                            result = n1 + n2;
+                            break;
+                        case "-":
+                            result = n1 - n2;
+                            break;
+                        case "*":
+                            result = n1 * n2;
+                            break;
+                        case "/":
+                            result = n1 / n2;
+                            break;
+                        case "%":
+                            result = n1 % n2;
+                            break;
+                    }
+                    alert(result);
+                    console.log(result);
+                }
+            }
+            function showReminder()
+            {
+                alert("Please, use me...");
+            }
+            setInterval(showReminder, 30000);
+        </script>
+    </body>
+</html>
